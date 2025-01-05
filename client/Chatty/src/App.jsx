@@ -1,9 +1,17 @@
 import React from 'react'
-
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import Signup from './Components/SIgnup';
+import Home from './Components/Home';
+import Login from './Components/Login';
 const App = () => {
   return (
-    <div className='bg-red-200'>
-      Lorem ipsum dolor sit amet.
+    <div>
+      <Routes>
+         <Route path='/' element={<Signup/>}/>
+         <Route path='/login' element={<Login/>}/>
+         <Route path='/home' element={<Home/>}/>
+         <Route/>
+      </Routes>
     </div>
   )
 }
